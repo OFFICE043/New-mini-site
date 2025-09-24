@@ -1,4 +1,6 @@
-herebody {
+/* Бұл файл index.html-ға <link> тегі арқылы қосылады және сайттың дизайнына жауап береді */
+
+body {
     background-image: url('https://images.alphacoders.com/133/1339879.png');
     background-size: cover;
     background-position: center;
@@ -20,7 +22,7 @@ herebody {
     100% { background-position: 0% 50%; }
 }
 
-/* Кириш ва Рўйхатдан ўтиш тугмалари учун стиль */
+/* Кириш ва Рўйхатдан ўтиш тугмалари (вкладка) учун стиль */
 .tab-button {
     flex-grow: 1;
     padding: 0.75rem;
