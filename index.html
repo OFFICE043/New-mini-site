@@ -1,45 +1,52 @@
-<!DOCTYPE html>
-<html lang="uz" class="dark">
+DOCTYPE html>
+<html lang="kk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Olami</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>AnimeSite - Professional Anime Platform</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/umd/lucide.js"></script>
 </head>
-<body class="text-gray-200">
-
-    <header class="bg-gray-900/50 backdrop-blur-sm sticky top-0 z-20">
-        <nav class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-            <button id="login-button" class="bg-purple-600 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded-md transition-colors">
-                Kirish
-            </button>
-            <div class="flex-1 flex justify-center px-4">
-                <input type="text" id="search-input" placeholder="Anime izlash..." class="bg-gray-800 border border-gray-700 rounded-md px-3 py-1.5 text-white focus:outline-none focus:ring-2 focus:ring-purple-500 w-full max-w-md">
-            </div>
-        </nav>
-    </header>
-
-    <main class="max-w-7xl mx-auto px-4 py-8">
-        <h2 class="text-3xl font-bold text-white mb-6" id="main-title">Ommabop animelar</h2>
-        <div id="anime-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
-            <div id="loading" class="col-span-full text-center py-10">
-                <p class="text-lg">Animelar yuklanmoqda...</p>
+<body>
+    <div id="app">
+        <!-- Loading screen мұнда көрсетіледі -->
+        <div class="loading-screen" id="loadingScreen">
+            <div class="loading-content">
+                <div class="loading-logo">🎌</div>
+                <h1>AnimeSite</h1>
+                <p>Professional Anime Platform жүктелуде...</p>
+                <div class="loading-spinner">
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                    <div class="loading-dot"></div>
+                </div>
+                <div class="connection-status">
+                    <i data-lucide="database"></i>
+                    <span>MongoDB Atlas: Қосылуда...</span>
+                    <div class="status-indicator"></div>
+                </div>
             </div>
         </div>
-    </main>
-
-    <div id="details-modal" class="fixed inset-0 bg-black bg-opacity-80 backdrop-blur-sm z-40 hidden items-center justify-center">
-        <div id="details-modal-content" class="bg-gray-900 w-full max-w-4xl max-h-[90vh] rounded-lg shadow-2xl relative overflow-y-auto">
-            </div>
-    </div>
-    
-    <div id="auth-modal" class="fixed inset-0 bg-black bg-opacity-70 backdrop-blur-sm flex items-center justify-center z-50 hidden">
-        <div class="auth-modal-content w-full max-w-md m-4 p-8 rounded-lg shadow-2xl text-white relative">
-            </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Модальдар мұнда қосылады -->
+    <div id="modals"></div>
+
+    <!-- JavaScript файлдары -->
+    <script src="js/config.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/components/header.js"></script>
+    <script src="js/components/animeCard.js"></script>
+    <script src="js/components/videoPlayer.js"></script>
+    <script src="js/components/authModal.js"></script>
+    <script src="js/admin/dashboard.js"></script>
+    <script src="js/admin/animeManagement.js"></script>
+    <script src="js/admin/userManagement.js"></script>
+    <script src="js/pages/homePage.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
